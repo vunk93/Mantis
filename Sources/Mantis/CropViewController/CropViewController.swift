@@ -433,8 +433,8 @@ extension CropViewController: CropToolbarDelegate {
         handleSetRatio()
     }
     
-    public func didSelectRatio(_ cropToolbar: CropToolbarProtocol? = nil, ratio: Double) {
-        setFixedRatio(ratio)
+    public func didSelectRatio(_ cropToolbar: CropToolbarProtocol? = nil, ratio: Double, zoom: Bool) {
+        setFixedRatio(ratio, zoom: zoom)
     }
     
     public func didSelectFreeRatio(_ cropToolbar: CropToolbarProtocol? = nil) {

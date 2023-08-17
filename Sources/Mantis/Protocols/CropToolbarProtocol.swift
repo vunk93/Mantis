@@ -17,7 +17,7 @@ public protocol CropToolbarDelegate: AnyObject {
     func didSelectClockwiseRotate(_ cropToolbar: CropToolbarProtocol?)
     func didSelectReset(_ cropToolbar: CropToolbarProtocol?)
     func didSelectSetRatio(_ cropToolbar: CropToolbarProtocol?)
-    func didSelectRatio(_ cropToolbar: CropToolbarProtocol?, ratio: Double)
+    func didSelectRatio(_ cropToolbar: CropToolbarProtocol?, ratio: Double, zoom: Bool)
     func didSelectFreeRatio(_ cropToolbar: CropToolbarProtocol?)
     func didSelectAlterCropper90Degree(_ cropToolbar: CropToolbarProtocol?)
     func didSelectHorizontallyFlip(_ cropToolbar: CropToolbarProtocol?)
@@ -30,7 +30,7 @@ public extension CropToolbarDelegate {
     func didSelectClockwiseRotate(_ cropToolbar: CropToolbarProtocol?) {}
     func didSelectReset(_ cropToolbar: CropToolbarProtocol?) {}
     func didSelectSetRatio(_ cropToolbar: CropToolbarProtocol?) {}
-    func didSelectRatio(_ cropToolbar: CropToolbarProtocol?, ratio: Double) {}
+    func didSelectRatio(_ cropToolbar: CropToolbarProtocol?, ratio: Double, zoom: Bool) {}
     func didSelectFreeRatio(_ cropToolbar: CropToolbarProtocol?) {}
     func didSelectAlterCropper90Degree(_ cropToolbar: CropToolbarProtocol?) {}
     func didSelectHorizontallyFlip(_ cropToolbar: CropToolbarProtocol?) {}
