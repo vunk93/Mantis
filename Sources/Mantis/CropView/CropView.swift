@@ -164,7 +164,7 @@ class CropView: UIView {
         case .touchCropboxHandle(let tappedEdge):
             cropAuxiliaryIndicatorView.handleIndicatorHandleTouched(with: tappedEdge)
             toggleRotationControlViewIsNeeded(isHidden: true)
-            cropMaskViewManager.showDimmingBackground(animated: true)
+            cropMaskViewManager.showDimmingBackground(animated: false)
         case .touchRotationBoard:
             cropAuxiliaryIndicatorView.gridLineNumberType = .rotate
             cropAuxiliaryIndicatorView.gridHidden = false
