@@ -14,8 +14,8 @@ class CropAuxiliaryIndicatorView: UIView, CropAuxiliaryIndicatorViewProtocol {
     private let cornerHandleLength = CGFloat(20.0)
     private let edgeLineHandleLength = CGFloat(30.0)
     private let handleThickness = CGFloat(3.0)
-    private let borderThickness = CGFloat(1.0)
-    private let hintLineThickness = CGFloat(2.0)
+    private let borderThickness = CGFloat(0.0) // defaul is 1.0
+    private let hintLineThickness = CGFloat(0.0) // defaul is 2.0
 
     private var hintLine = UIView()
     private var tappedEdge: CropViewAuxiliaryIndicatorHandleType = .none

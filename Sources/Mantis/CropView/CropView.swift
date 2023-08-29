@@ -164,7 +164,7 @@ class CropView: UIView {
         case .touchCropboxHandle(let tappedEdge):
             cropAuxiliaryIndicatorView.handleIndicatorHandleTouched(with: tappedEdge)
             toggleRotationControlViewIsNeeded(isHidden: true)
-            cropMaskViewManager.showDimmingBackground(animated: false)
+            cropMaskViewManager.showDimmingBackground(animated: true)
         case .touchRotationBoard:
             cropAuxiliaryIndicatorView.gridLineNumberType = .rotate
             cropAuxiliaryIndicatorView.gridHidden = false
@@ -552,16 +552,16 @@ extension CropView {
             makeSureImageContainsCropOverlay()
         }
         
-        if animation {
-            UIView.animate(withDuration: 0.25, animations: {
-                updateUI(by: newCropBoxFrame, and: scaleFrame)
-            }, completion: {_ in
-                completion()
-            })
-        } else {
-            updateUI(by: newCropBoxFrame, and: scaleFrame)
-            completion()
-        }
+//        if animation {
+//            UIView.animate(withDuration: 0.25, animations: {
+//                updateUI(by: newCropBoxFrame, and: scaleFrame)
+//            }, completion: {_ in
+//                completion()
+//            })
+//        } else {
+        updateUI(by: newCropBoxFrame, and: scaleFrame)
+        completion()
+//        }
         
         manualZoomed = true
     }
